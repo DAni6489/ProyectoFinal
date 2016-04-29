@@ -1,31 +1,39 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#D4E157"
-    tools:context=".MainActivity">
+
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/dibujito"
+          >
 
   <LinearLayout
       android:layout_width="wrap_content"
-      android:layout_height="250dp "
+      android:layout_height="150dp "
       android:orientation="horizontal">
+
 
       <ImageButton
           android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:scaleType="centerCrop"
+          android:scaleType="fitXY"
           android:layout_weight="1"
           android:src="@drawable/bambam2"
           android:onClick="GenerarV"
+
           android:id="@+id/nombreVaron"/>
 
       <ImageButton
           android:layout_width="0dp"
           android:layout_height="wrap_content"
-          android:scaleType="centerCrop"
+          android:scaleType="fitXY"
           android:layout_weight="1"
           android:src="@drawable/pebbles"
           android:onClick="GenerarM"
@@ -33,122 +41,24 @@
 
 
   </LinearLayout>
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-               android:id="@+id/enero"
-                android:layout_weight="1"
-                android:text="Enero"/>
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/febrero"
-                android:layout_weight="1"
-                android:text="Febrero"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/marzo"
-            android:layout_weight="1"
-            android:text="Marzo"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/abril"
-            android:layout_weight="1"
-            android:text="Abril"/>
 
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/mostrarNombre"
+                android:gravity="center"
+                android:textColor="#424242"
+                android:textStyle="bold"
+                android:textSize="35sp"/>
 
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/mayo"
-                android:layout_weight="1"
-                android:text="Mayo"/>
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/junio"
-                android:layout_weight="1"
-                android:text="Junio"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/julio"
-            android:text="Julio"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/agosto"
-            android:layout_weight="1"
-            android:text="Agosto" />
-
-
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/septiembre"
-                android:textSize="10dp"
-                android:layout_weight="1"
-                android:text="Septiembre"/>
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/octubre"
-                android:layout_weight="1"
-                android:textSize="10dp"
-                android:text="Octubre"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:layout_weight="1"
-            android:id="@+id/noviembre"
-            android:text="Noviembre"/>
-            <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:layout_weight="1"
-            android:id="@+id/diciembre"
-            android:text="Diciembre"/>
-
-        </LinearLayout>
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/mostrarNombre"
-        android:gravity="center"
-        android:textColor="#FF9100"
-        android:textSize="50sp"/>
-
-</LinearLayout>
