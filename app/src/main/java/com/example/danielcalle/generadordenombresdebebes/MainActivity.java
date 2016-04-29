@@ -1,19 +1,22 @@
 package com.example.danielcalle.generadordenombresdebebes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView  a,b ;
-    RadioButton ene,feb,mar,abr,may,jun,jul,agos,sep,oct,nov,dic;
+   Spinner      s;
     TextView muestra;
     Varones nom = new  Varones();
     Mujeres nomM= new Mujeres();
@@ -24,18 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         a=(ImageView)findViewById(R.id.nombreVaron);
         b=(ImageView)findViewById(R.id.nombreMujer);
-        ene=(RadioButton)findViewById(R.id.enero);
-        feb=(RadioButton)findViewById(R.id.febrero);
-        mar=(RadioButton)findViewById(R.id.marzo);
-        abr=(RadioButton)findViewById(R.id.abril);
-        may=(RadioButton)findViewById(R.id.mayo);
-        jun=(RadioButton)findViewById(R.id.junio);
-        jul=(RadioButton)findViewById(R.id.julio);
-        agos=(RadioButton)findViewById(R.id.agosto);
-        sep=(RadioButton)findViewById(R.id.septiembre);
-        oct=(RadioButton)findViewById(R.id.octubre);
-        nov=(RadioButton)findViewById(R.id.noviembre);
-        dic=(RadioButton)findViewById(R.id.diciembre);
+       s=(Spinner)findViewById(R.id.spinner);
+        String[]meses = { "MESES","Enero" ,"Febrero" , "Marzo" , "Abril" ,"Mayo" ,"Junio" ,"Julio" ,"Agosto" ,"Septiembre" ,"Octubre" ,"Noviembre","Diciembre"};
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,meses);
+        s.setAdapter(adapter);
         muestra=(TextView)findViewById(R.id.mostrarNombre);
 
 
@@ -50,14 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()){
+            case R.id.acercade:
+                Intent i = new Intent(this, SegundoActivity .class);
+                startActivity(i);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

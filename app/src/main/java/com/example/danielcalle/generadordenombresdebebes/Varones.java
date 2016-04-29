@@ -15,31 +15,31 @@ public class Varones {
 
     public void llenar(){
 
-        v[0]="Daniel";
-        v[1]="Roberto";
-        v[2]="Luis";
-        v[3]="Cesar";
-        v[4]="Jhon";
-        v[5]="Franco";
-        v[6]="Marcelo";
-        v[7]="Ivan";
-        v[8]="Brayan";
-        v[9]="Adrian";
-        v[10]="Alvaro";
-        v[11]="Hector";
-        v[12]="Ronaldo";
-        v[13]="Andres";
-        v[14]="Jose";
-        v[15]="Erlan";
-        v[16]="Javier";
-        v[17]="Carlos";
-        v[18]="Joel";
-        v[19]="Homero";
-        v[20]="Tony";
-        v[21]="Shane";
-        v[22]="Bruce";
-        v[23]="Manuel";
-        v[24]="Jhony";
+        v[0]="DANIEL :\nPerro Loco";
+        v[1]="ROBERTO :\nEl que tiene fama  de origen germano";
+        v[2]="LUIS :\nEl guerrero famoso";
+        v[3]="CESAR :\nhijo de cachorritas";
+        v[4]="JHONNY :\nPleno de gracia divina";
+        v[5]="FRANCO :\nEl hombre libre";
+        v[6]="MARCELO : \nProviene de mar y cielo";
+        v[7]="IVAN :\nPleno de gracia";
+        v[8]="BRAYAN :\nOrigen celta";
+        v[9]="ADRIAN :\nEl que viene del mar";
+        v[10]="ALVARO :\nQue es prevenido";
+        v[11]="HECTOR :\nQue protege";
+        v[12]="RONALDO :\nEl que es poderoso y fuerte";
+        v[13]="ANDRES :\nValiente y Varonil";
+        v[14]="JOSE :\nAl que dios engrandece";
+        v[15]="ERLAN :\nEl soldado";
+        v[16]="JAVIER :\nEl que vive en casa nueva";
+        v[17]="CARLOS :\nVaronil fuerte";
+        v[18]="JOEL :\nDios es su señor";
+        v[19]="HOMERO : \nEl que no ve";
+        v[20]="TONY :\nQue se destaca entre todos";
+        v[21]="OSCAR :\nLa lanza de los dioses";
+        v[22]="BRUCE :\nEl moreno";
+        v[23]="MANUEL :\nDios esta con nosotros";
+        v[24]="RUBEN :\nRecibi un hijo de dios";
     }
 
     public String getV(int numero) {
